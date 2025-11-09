@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <title>shopz</title>
+</head>
+<body data-theme="light">
+  <header>
+    <div class="logo"><div class="mark">𝕊𝆎</div><div>ShopZ</div></div>
+    <div class="search-wrap">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <input id="search" placeholder="Search products, brands, categories..." />
+        <select id="categorySelect" class="select small">
+          <option value="all">All categories</option>
+        </select>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Toggle dark / light">🌓</button>
+      <button id="openAccount" class="icon-btn">👤</button>
+    </div>
+    <div class="row">
+      <button id="openWishlist" class="icon-btn">🖤</button>
+      <button id="openCart" class="icon-btn">🛒 <span id="cartCount" style="font-size:12px;margin-left:6px"></span></button>
+    </div>
+  </header>
+
+  <nav class="categories" id="categoryBar"></nav>
+
+  <div class="container">
+    <div class="offers">
+      <div class="pill">FLASH SALE</div>
+      <div><strong>Flat 25% off</strong> on selected electronics — limited time</div>
+      <div style="margin-left:auto" class="small muted">Free delivery on orders ₹999+</div>
+    </div>
+
+    <div class="top-row">
+      <h2>All Products</h2>
+      <div class="filters">
+        <select id="sort" class="select small">
+          <option value="relevance">Sort: Relevance</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="newest">Newest</option>
+        </select>
+        <button id="showOffers" class="icon-btn small">Offers</button>
+      </div>
+    </div>
+
+    <div id="productsGrid" class="grid"></div>
+
+    <footer>
+      2025 © All rights reserved by Sai(ShopZ)
+    </footer>
+  </div>
+
+  <div class="floating" title="Open cart">
+    <div>🛒 <strong id="floatingCount">0</strong></div>
+    <button id="floatingOpen" class="btn primary small">Checkout</button>
+  </div>
+
+  <!-- Modals -->
+  <div id="modalBg" class="modal-bg">
+    <div class="modal" id="modalContent"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
